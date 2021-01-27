@@ -32,3 +32,5 @@ Route::get('/camp', function () {
 Route::get('/candidati', function () {
     return view('candidati');
 })->name('canditati');
+
+Route::get('/users', 'MyUsersController@index') -> name('users');

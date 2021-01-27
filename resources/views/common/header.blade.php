@@ -8,4 +8,6 @@
     @endforeach
   </ul>
   <button type="button" name="button"><a href="/candidati">Candidati Ora</a></button>
+  <button type="button" name="button"><a href="/users">Users</a></button>
+
 </nav>
