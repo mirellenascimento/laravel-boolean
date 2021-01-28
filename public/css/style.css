@@ -1,4 +1,26 @@
+body{
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+}
 
+header{
+  margin: 50px 0 100px 0;
+}
+footer{
+  background-color: navy;
+  color: white;
+  margin-top: 100px;
+}
+
+.header img{
+  height: 40px;
+}
+
+ul li{
+  display: inline-block;
+  padding: 10px;
+}
 .cds-container {
     display: flex;
     justify-content: center;

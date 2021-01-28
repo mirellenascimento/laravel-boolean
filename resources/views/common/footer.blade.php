@@ -1,10 +1,14 @@
-<nav>
-  <h1>This is the footer</h1>
-  <ul>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-    <li>1</li>
-  </ul>
-</nav>
+<footer>
+  <div class="container">
+      <div class="row header">
+          <div class="col text-center">
+            <ul>
+              @foreach(config('main.routes') as $route)
+              <li class={{ Route::currentRouteName() == $route['pathId'] ? 'active' : '' }}>
+              <a href="{{route($route['pathId'], [], false)}}">{{$route['displayText']}}</a></li>
+              @endforeach
+            </ul>
+          </div>
+      </div>
+  </div>
+</footer>

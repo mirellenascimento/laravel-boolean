@@ -1,13 +1,20 @@
-<nav>
-  <h1>This is the header</h1>
-  <img src="logo" alt="logo">
-  <ul>
-    @foreach(config('main.routes') as $route)
-    <li class={{ Route::currentRouteName() == $route['pathId'] ? 'active' : '' }}>
-    <a href="{{route($route['pathId'], [], false)}}">{{$route['displayText']}}</a></li>
-    @endforeach
-  </ul>
-  <button type="button" name="button"><a href="/candidati">Candidati Ora</a></button>
-  <button type="button" name="button"><a href="/users">Users</a></button>
+<header>
+  <div class="container">
+      <div class="row header">
+          <div class="col-lg-2">
+              <a href="/"><img src="img/logo.png" alt="logo"></a>
+          </div>
+          <div class="col-lg-10 text-right">
+            <ul>
+              @foreach(config('main.routes') as $route)
+              <li class={{ Route::currentRouteName() == $route['pathId'] ? 'active' : '' }}>
+              <a href="{{route($route['pathId'], [], false)}}">{{$route['displayText']}}</a></li>
+              @endforeach
+              <li><a class="btn btn-outline-success" href="/candidati">Candidati ora</a></li>
+              <li><a class="btn btn-success" href="/users">Users</a></li>
 
-</nav>
+            </ul>
+          </div>
+      </div>
+  </div>
+</header>
