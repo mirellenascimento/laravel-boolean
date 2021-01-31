@@ -14,7 +14,7 @@
       <h3>{{$user->first_name}} {{$user->last_name}}</h3>
       <span class="author">{{$user->gender}}</span>
       <span class="year">{{$user->email}}</span>
-      <a href="/users/{{$user->id}}">View details</a>
+      <a href="{{route(''show_user'')}}">View details</a>
     </div>
   @endforeach
 </div>
